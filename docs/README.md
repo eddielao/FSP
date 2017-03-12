@@ -15,6 +15,7 @@ Take Attendance
 Manage Classes
 Add/Edit Students
 Record Grades
+Search (bonus)
 
 ## Design Docs
 
@@ -29,4 +30,4 @@ Sample State
 ##### Phase 1: Backend setup and Front End User Authentication (2 days)
 **Object:** Functioning rails project with front-end Authentication
 
-##### Phase 2: 
+##### Phase 2:
