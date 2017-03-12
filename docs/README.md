@@ -28,6 +28,19 @@ Sample State
 ## Implementation Timeline
 
 ##### Phase 1: Backend setup and Front End User Authentication (2 days)
-**Object:** Functioning rails project with front-end Authentication
+**Objective:** Functioning rails project with front-end Authentication
 
-##### Phase 2:
+##### Phase 2: Students Model (2 days)
+**Objective:** Students can be created, read, edited, and destroyed through API.
+
+##### Phase 3: Home Model (1 day)
+**Objective:** Home page loaded with sidebar and ready for other components.
+
+##### Phase 4: Classes Model (2 days)
+**Objective:** Classes can be created, read, edited, and destroyed through API.
+
+##### Phase 5: Grades Model (1 day)
+**Objective:** Grades can be created, read and edited through API.
+
+##### Phase 6: Attendance Model (1 days)
+**Objective:** Attendance can be created and read through API.
