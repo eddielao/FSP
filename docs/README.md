@@ -19,7 +19,7 @@ Search (bonus)
 
 ## Design Docs
 
-View Wireframes(./wireframes/)
+View Wireframes[./wireframes/]
 React Components
 API endpoints
 DB schema
