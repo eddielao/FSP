@@ -22,7 +22,7 @@ email           | string    | not null, unique
 column name         | data type | details
 --------------------|-----------|-----------------------
 id                  | integer   | not null, primary key
-subject             | string    | not null, indexed, unique
+title               | string    | not null, indexed, unique
 
 #enrollments
 column name         | data type | details
