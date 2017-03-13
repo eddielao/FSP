@@ -27,21 +27,21 @@ title               | string    | not null, indexed, unique
 #enrollments
 column name         | data type | details
 --------------------|-----------|-----------------------
-class_id            | integer   | not null, foreign key
-student_id          | integer   | not null, foreign key
+class_id            | integer   | not null, foreign key (reference table classes)
+student_id          | integer   | not null, foreign key (reference table students)
 
 ## grades
 column name         | data type | details
 --------------------|-----------|-----------------------
 id                  | integer   | not null, primary key
 grade               | string    | not null
-subject_id          | integer   | not null, foreign key
-enrolled_student_id | integer   | not null, foreign key
+class_id            | integer   | not null, foreign key (reference table classes)
+student_id          | integer   | not null, foreign key (reference table student)
 
 ## attendance
 column name         | data type | details
 --------------------|-----------|-----------------------
 id                  | integer   | not null, primary key
 date                | date      | not null
-subject_id          | integer   | not null, foreign key
-enrolled_student_id | integer   | not null, foreign key
+class_id            | integer   | not null, foreign key (reference table classes)
+student_id          | integer   | not null, foreign key (reference table students)
