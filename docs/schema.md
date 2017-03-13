@@ -23,7 +23,12 @@ column name         | data type | details
 --------------------|-----------|-----------------------
 id                  | integer   | not null, primary key
 subject             | string    | not null, indexed, unique
-enrolled_student_id | integer   | not null, foreign key
+
+#enrollments
+column name         | data type | details
+--------------------|-----------|-----------------------
+class_id            | integer   | not null, foreign key
+student_id          | integer   | not null, foreign key
 
 ## grades
 column name         | data type | details
