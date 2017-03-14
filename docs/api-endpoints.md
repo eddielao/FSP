@@ -36,5 +36,14 @@
 
 ### Attendance
 
-- `GET /api/students/:id/attendance`
-- `POST /api/students/:id/classes/:id/attendance`
+- `GET /api/attendance`
+- `POST /api/attendance`
+  - accepts student_id and class_id params
+
+### Grades
+
+- `GET /api/grades`
+- `GET /api/grades`
+  - accepts student_id and class_id params
+- `POST /api/grades`
+  - accepts student_id and class_id params
