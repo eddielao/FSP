@@ -9,16 +9,34 @@
 
   classes: {  
     1: {id: 1,  
-    title: "Math",  
-    enrolled_student_id: [1, 3, 4]},
+      title: "Math",  
+      enrolled_student_id: {
+        1: {id: 1,  
+        fname: "Eddie",  
+        lname: "Lao"},
+        3: {id: 3,  
+        fname: "Chase",  
+        lname: "Lao"},
+        4: {id: 4,  
+        fname: "Ashlee",  
+        lname: "Liang"}
+      }
+    },
 
     2: {id: 2,  
     title: "Writing",  
-    enrolled_student_id: [1, 2]},
+    enrolled_student_id: {1: {...}, 2: {...}}
+    },  (See class 1)
 
     3: {id: 3,  
     title: "Intro to App Development",  
-    enrolled_student_id: [1, 2, 3, 4, 5, 6]}
+    enrolled_student_id: {1: {...},
+                          2: {...},
+                          3: {...},
+                          4: {...},
+                          5: {...},
+                          6: {...}}
+    }  (See class 1)
   },
 
   students: {  
