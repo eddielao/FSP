@@ -24,9 +24,10 @@ column name         | data type | details
 id                  | integer   | not null, primary key
 title               | string    | not null, indexed, unique
 
-#enrollments
+## enrollments
 column name         | data type | details
 --------------------|-----------|-----------------------
+id                  | integer   | not null, primary key
 class_id            | integer   | not null, foreign key (reference table classes)
 student_id          | integer   | not null, foreign key (reference table students)
 
