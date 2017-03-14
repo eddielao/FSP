@@ -1,7 +1,7 @@
 module.exports = {
   entry: './frontend/elogix.jsx',
   output: {
-    filename: './bundle.js',
+    filename: './app/assets/javascripts/bundle.js',
   },
   module: {
     loaders: [
