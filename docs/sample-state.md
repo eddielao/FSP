@@ -1,9 +1,6 @@
 {
   currentUser: {  
     1: {id: 1,  
-    username: "demo"},
-
-    2: {id: 2,  
     username: "Steven"}
   },
 
