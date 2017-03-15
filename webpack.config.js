@@ -1,22 +1,26 @@
+var path = require("path");
+
 module.exports = {
-  entry: './frontend/elogix.jsx',
+  context: __dirname,
+  entry: "./frontend/elogix.jsx",
   output: {
-    filename: './app/assets/javascripts/bundle.js',
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
+    filename: "bundle.js"
   },
   module: {
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
         query: {
           presets: ['es2015', 'react']
         }
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: 'source-maps',
   resolve: {
-    extensions: ['.js', '.jsx', '*']
+    extensions: ["", ".js", ".jsx" ]
   }
 };
