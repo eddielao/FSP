@@ -7,7 +7,7 @@
   classes: {  
     1: {id: 1,  
       title: "Math",  
-      enrolled_student_id: {
+      enrolled_students: {
         1: {id: 1,  
         fname: "Eddie",  
         lname: "Lao"},
@@ -22,12 +22,12 @@
 
     2: {id: 2,  
     title: "Writing",  
-    enrolled_student_id: {1: {...}, 2: {...}}
+    enrolled_students: {1: {...}, 2: {...}}
     },  (See class 1)
 
     3: {id: 3,  
     title: "Intro to App Development",  
-    enrolled_student_id: {1: {...},
+    enrolled_students: {  1: {...},
                           2: {...},
                           3: {...},
                           4: {...},
@@ -38,34 +38,47 @@
 
   students: {  
     1: {id: 1,  
-    fname: "Eddie",  
-    lname: "Lao",  
-    enrolled_class_id: [1, 2, 3]},
+        fname: "Eddie",  
+        lname: "Lao",  
+        enrolled_classes: {
+          1: {id: 1,  
+              title: "Math"},
+          2: {id: 2,  
+              title: "Writing"},
+          3: {id: 3,  
+          title: "Intro to App Development"}
+        }
+    },
 
     2: {id: 2,  
-    fname: "Amber",  
-    lname: "Liang",  
-    enrolled_class_id: [1, 2]},
+      fname: "Amber",  
+      lname: "Liang",  
+      enrolled_classes: {1:{...}, 2:{...}}   (see student 1)
+    },
 
     3: {id: 3,  
-    fname: "Chase",  
-    lname: "Lao",  
-    enrolled_class_id: [3]},
+        fname: "Chase",  
+        lname: "Lao",  
+        enrolled_classes: {3:{...}}
+    },
 
     4: {id: 4,  
-    fname: "Ashlee",  
-    lname: "Liang",  
-    enrolled_class_id: [3]},
+        fname: "Ashlee",  
+        lname: "Liang",  
+        enrolled_classes: {3:{...}}
+    },
 
     5: {id: 5,  
-    fname: "Eddie",  
-    lname: "Edmonds",  
-    enrolled_class_id: [2, 3]},
+        fname: "Eddie",  
+        lname: "Edmonds",  
+        enrolled_classes: {2:{...}, 3:{...}}
+    },
 
     6: {id: 6,  
-    fname: "Mia",  
-    lname: "Lac",  
-    enrolled_class_id: [1, 2, 3]}
+      fname: "Mia",  
+      lname: "Lac",  
+      enrolled_classes: {1:{...}, 2:{...}, 3:{...}}
+    }
   },
 
   grades: {
