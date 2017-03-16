@@ -18,7 +18,7 @@ fname           | string    | not null, indexed
 lname           | string    | not null, indexed
 email           | string    | not null, unique
 
-## classes
+## courses
 column name         | data type | details
 --------------------|-----------|-----------------------
 id                  | integer   | not null, primary key
