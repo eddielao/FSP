@@ -23,12 +23,18 @@ const Root = ({ store }) => {
     }
   };
 
+  const resetErrors = () => {
+    console.log(store.getState().session.errors);
+  };
+
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
           <Route path="/login" component={ SessionFormContainer }
-            onEnter={_redirectIfLoggedIn} />
+            onEnter={_redirectIfLoggedIn}
+            onChange={resetErrors}
+          />
           <Route path="/signup" component={ SessionFormContainer }
             onEnter={_redirectIfLoggedIn} />
         </Route>
