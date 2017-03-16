@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
-import GreetingContainer from './greeting/greeting_container';
+import LoginContainer from './login/login_container';
 
 const App = ({ children }) => (
-  <div>
-    <h1>eLogix ST</h1>
-    <GreetingContainer />
-    {children}
+  <div className="app-container">
+    <header className="top-control-bar">
+      <section className="main-logo">
+        <h1><Link to="/">eLogix ST</Link></h1>
+      </section>
+      <nav>
+        <LoginContainer />
+      </nav>
+    </header>
+    <section className="body">
+      {children}
+    </section>
   </div>
 );
 
