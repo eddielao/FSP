@@ -19,13 +19,14 @@
  }
 
 .login-form-box {
-  font-size: smaller;
+  font-size: small;
   display: inline-table;
   margin-top: 10%;
   margin-left: 25%;
   border-style: groove;
   border-radius: 5px;
   text-align: center;
+  padding: 2px;
   width: 20%;
 }
 
@@ -36,6 +37,10 @@
 
 .header-group, .login-signup {
   float: right;
+}
+
+input {
+  margin: 2px;
 }
 
 .login-form-container {
