@@ -7,77 +7,77 @@
   classes: {  
     1: {id: 1,  
       title: "Math",  
-      enrolled_students: {
-        1: {id: 1,  
+      enrolled_students: [
+        {id: 1,  
         fname: "Eddie",  
         lname: "Lao"},
-        3: {id: 3,  
+        {id: 3,  
         fname: "Chase",  
         lname: "Lao"},
-        4: {id: 4,  
+        {id: 4,  
         fname: "Ashlee",  
         lname: "Liang"}
-      }
+      ]
     },
 
     2: {id: 2,  
     title: "Writing",  
-    enrolled_students: {1: {...}, 2: {...}}
+    enrolled_students: [ {...}, {...}]
     },  (See class 1)
 
     3: {id: 3,  
     title: "Intro to App Development",  
-    enrolled_students: {  1: {...},
-                          2: {...},
-                          3: {...},
-                          4: {...},
-                          5: {...},
-                          6: {...}}
-    }  (See class 1)
+    enrolled_students: [  {...},
+                          {...},
+                          {...},
+                          {...},
+                          {...},
+                          {...}]
+    ]  (See class 1)
   },
 
   students: {  
     1: {id: 1,  
         fname: "Eddie",  
         lname: "Lao",  
-        enrolled_classes: {
-          1: {id: 1,  
+        enrolled_classes: [
+          {id: 1,  
               title: "Math"},
-          2: {id: 2,  
+          {id: 2,  
               title: "Writing"},
-          3: {id: 3,  
+          {id: 3,  
           title: "Intro to App Development"}
-        }
+        ]
     },
 
     2: {id: 2,  
       fname: "Amber",  
       lname: "Liang",  
-      enrolled_classes: {1:{...}, 2:{...}}   (see student 1)
+      enrolled_classes: [{...}, {...}]   (see student 1)
     },
 
     3: {id: 3,  
         fname: "Chase",  
         lname: "Lao",  
-        enrolled_classes: {3:{...}}
+        enrolled_classes: [{...}]
     },
 
     4: {id: 4,  
         fname: "Ashlee",  
         lname: "Liang",  
-        enrolled_classes: {3:{...}}
+        enrolled_classes: [{...}]
     },
 
     5: {id: 5,  
         fname: "Eddie",  
         lname: "Edmonds",  
-        enrolled_classes: {2:{...}, 3:{...}}
+        enrolled_classes: [{...}, {...}]
     },
 
     6: {id: 6,  
       fname: "Mia",  
       lname: "Lac",  
-      enrolled_classes: {1:{...}, 2:{...}, 3:{...}}
+      enrolled_classes: [{...}, {...}, {...}]
     }
   },
 
