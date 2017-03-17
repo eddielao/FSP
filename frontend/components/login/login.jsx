@@ -20,10 +20,10 @@ class Login extends React.Component {
 
   personalGreeting(currentUser, logout) {
     return(
-      <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
+      <nav className="login-signup">
+        hello! {currentUser.username}
+        <button className="header-button" onClick={logout}>logout</button>
+      </nav>
     );
   }
 

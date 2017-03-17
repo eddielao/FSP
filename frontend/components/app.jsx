@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 import LoginContainer from './login/login_container';
 
-const splash = () => (
-  <img className="body" />
-);
-
 const App = ({ children }) => {
-  console.log(children);
-  let body = children === null ? splash() : children;
+  let body = children;
+  if (window.currentUser === undefined && children === null) {
+    body = <img className="body" />;
+  }
   return (
     <div className="app-container">
       <header className="top-control-bar">

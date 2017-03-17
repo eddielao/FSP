@@ -16,9 +16,9 @@ ___
 * Calendar
 * Attendance
 
-##### ClassContainer
-* Add Class
-* List of Classes
+##### ClourseContainer
+* Add Course
+* List of Courses
 
 ##### StudentContainer
 * Add Student
@@ -35,6 +35,6 @@ ___
 | "/sign-in"         | "AuthFormContainer"   |
 | "/home             | "HomeContainer"       |
 | "/home/attendance" | "AttendanceContainer" |
-| "/home/classes"    | "ClassContainer"      |
+| "/home/classes"    | "CourseContainer"      |
 | "/home/students"   | "StudentContainer"    |
 | "/home/grades"     | "GradeContainer"      |
