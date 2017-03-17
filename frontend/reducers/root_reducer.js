@@ -4,7 +4,7 @@ import CourseReducer from './course_reducer';
 import SessionReducer from './session_reducer';
 
 const RootReducer = combineReducers({
-  course: CourseReducer,
+  courses: CourseReducer,
   session: SessionReducer
 });
 

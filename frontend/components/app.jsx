@@ -13,9 +13,9 @@ const App = ({ children }) => {
         <Link to="/"><section className="main-logo">
           <h1>eLogix ST</h1>
         </section></Link>
-        <nav>
+        <div>
           <LoginContainer />
-        </nav>
+        </div>
       </header>
         {body}
     </div>

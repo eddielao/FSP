@@ -18,6 +18,15 @@ class Api::CoursesController < ApplicationController
     @course = Course.find(params[:id])
   end
 
+  def destroy
+    @course = Course.find(params[:id])
+    if @course.destroy
+      render "api/courses/show"
+    else
+      render json: @course.errors.full_messages, status: 422
+    end
+  end
+
   private
 
   def course_params
