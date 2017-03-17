@@ -49,6 +49,11 @@ button {
 
 a:link {
   font-weight: lighter;
+  font-size: small;
+}
+
+a:link:hover {
+  font-weight: bold;
 }
 
 .login-form-container {
