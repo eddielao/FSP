@@ -12,7 +12,7 @@ class Login extends React.Component {
         <nav className="login-signup">
           <Link to="/login" activeClassName="current">Login</Link>
           <Link to="/signup" activeClassName="current">Sign up!</Link>
-          <button onClick={() => this.props.guestLogin()}>Guest</button>
+          <button onClick={() => this.props.guestLogin()}>guest</button>
         </nav>
       </div>
     );
