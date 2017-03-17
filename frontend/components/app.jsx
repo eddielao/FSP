@@ -12,9 +12,7 @@ const App = ({ children }) => (
         <LoginContainer />
       </nav>
     </header>
-    <section className="body">
       {children}
-    </section>
   </div>
 );
 

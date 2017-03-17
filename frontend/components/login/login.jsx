@@ -8,13 +8,13 @@ class Login extends React.Component {
 
   sessionLinks() {
     return (
-      <nav className="login-signup">
-        <Link to="/login" activeClassName="current">Login</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup" activeClassName="current">Sign up!</Link>
-        &nbsp;or&nbsp;
-        <button onClick={() => this.props.guestLogin()}>Guest</button>
-      </nav>
+      <div>
+        <nav className="login-signup">
+          <Link to="/login" activeClassName="current">Login</Link>
+          <Link to="/signup" activeClassName="current">Sign up!</Link>
+          <button onClick={() => this.props.guestLogin()}>Guest</button>
+        </nav>
+      </div>
     );
   }
 

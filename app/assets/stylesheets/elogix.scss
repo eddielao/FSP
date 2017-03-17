@@ -8,6 +8,18 @@
   background-image: url(https://www.myattendancetracker.com/img/proui-2.0/frontend/math-student.jpg);
 }
 
+button {
+  border: black;
+  border-style: solid;
+  border-radius: 5px;
+  padding-left: 1%;
+  padding-right: 1%;
+  box-shadow: black 0 2px 5px;
+  border-width: thin;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
 .login-form-box {
   border: gray;
   border-style: groove;
@@ -26,6 +38,13 @@
   border-style: groove;
   border-radius: 5px;
   margin: 1%;
+}
+
+.login-signup a{
+  border-left: lightgray;
+  border-style: solid;
+  border-left-width: thin;
+  padding-left: 1%;
 }
 
 a:link {
