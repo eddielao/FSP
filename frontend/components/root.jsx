@@ -34,7 +34,7 @@ const Root = ({ store }) => {
           <Route path="/signup" component={ SessionFormContainer }
             onEnter={_redirectIfLoggedIn}
           />
-          <IndexRoute component={ CourseFormContainer } />
+          <Route path="/courses/add" component={ CourseFormContainer } />
         </Route>
       </Router>
     </Provider>
