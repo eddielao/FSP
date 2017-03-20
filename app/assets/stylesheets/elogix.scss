@@ -20,6 +20,11 @@ button {
   margin-right: 1%;
 }
 
+button:hover {
+  background-color: gray;
+  color: whitesmoke;
+}
+
 input[type=submit] {
   border: black;
   border-style: solid;
@@ -43,6 +48,7 @@ input[type=submit] {
   margin-right: 25%;
   margin-top: 5%;
   padding: 1%;
+  padding-top: 2%;
   border-radius: 5px;
   text-align: center;
   background-color: black;
@@ -57,11 +63,16 @@ input {
   margin: 1%;
 }
 
-.login-signup a{
+.login-signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 200px;
   border-left: lightgray;
   border-style: solid;
   border-left-width: thin;
   padding-left: 1%;
+  padding-right: 1%;
 }
 
 a:link {
@@ -78,6 +89,8 @@ a:link:hover {
   display: flex;
   background-image: url(https://www.myattendancetracker.com/img/proui-2.0/frontend/math-student.jpg);
   height: 800px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .login-error {
