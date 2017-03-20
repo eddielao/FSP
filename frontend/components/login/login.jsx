@@ -1,9 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    this.handleGuest = this.handleGuest.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  handleGuest(e) {
+    e.preventDefault();
+    this.props.guestLogin()
+      .then(() => this.props.router.push("/courses/add"));
+  }
+
+  handleLogout(e) {
+    e.preventDefault();
+    this.props.logout()
+      .then(() => this.props.router.push("/login"));
   }
 
   sessionLinks() {
@@ -12,7 +26,7 @@ class Login extends React.Component {
         <nav className="login-signup">
           <Link to="/login" activeClassName="current">Login</Link>
           <Link to="/signup" activeClassName="current">Sign up!</Link>
-          <button onClick={() => this.props.guestLogin()}>guest</button>
+          <button onClick={this.handleGuest}>guest</button>
         </nav>
       </div>
     );
@@ -21,8 +35,9 @@ class Login extends React.Component {
   personalGreeting(currentUser, logout) {
     return(
       <nav className="login-signup">
-        hello! {currentUser.username}
-        <button className="header-button" onClick={logout}>logout</button>
+        {currentUser.username}
+        <button className="header-button"
+          onClick={this.handleLogout}>logout</button>
       </nav>
     );
   }
@@ -36,4 +51,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
