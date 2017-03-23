@@ -3,14 +3,14 @@ import { Link } from 'react-router';
 
 const AttendanceIndexItem = ({ attendance, deleteAttendance, router }) => {
   return (
-    <li className="attendance-index-item">
-      <Link to={`/attendances/${attendance.id}`}>
-        <span>{attendance.date}, </span>
-        <span>{attendance.course_id}, </span>
-        <span>{attendance.student_id}</span>
-      </Link>
-      <button onClick={() => deleteAttendance(attendance.id)}>remove</button>
-    </li>
+    <tr>
+      <td>{attendance.date}</td>
+      <td>{attendance.course_id}</td>
+      <td>{attendance.student_id}</td>
+      <td>
+        <button onClick={() => deleteAttendance(attendance.id)}>remove</button>
+      </td>
+    </tr>
   );
 };
 

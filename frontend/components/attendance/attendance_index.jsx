@@ -10,13 +10,23 @@ class AttendanceIndex extends Component {
     const { attendances, deleteAttendance, children } = this.props;
     return (
       <section className="item-index">
-        <ul>
-          {attendances.map(attendance => <AttendanceIndexItem
-            key={attendance.id}
-            attendance={attendance}
-            deleteAttendance={deleteAttendance}
-          />)}
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Present</th>
+              <th>Course ID</th>
+              <th>Student ID</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {attendances.map(attendance => <AttendanceIndexItem
+              key={attendance.id}
+              attendance={attendance}
+              deleteAttendance={deleteAttendance}
+              />)}
+          </tbody>
+        </table>
       </section>
     );
   }

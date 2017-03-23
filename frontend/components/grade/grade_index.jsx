@@ -10,13 +10,23 @@ class GradeIndex extends Component {
     const { grades, deleteGrade, children } = this.props;
     return (
       <section className="item-index">
-        <ul>
-          {grades.map(grade => <GradeIndexItem
-            key={grade.id}
-            grade={grade}
-            deleteGrade={deleteGrade}
-          />)}
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Grade</th>
+              <th>Course ID</th>
+              <th>Student ID</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {grades.map(grade => <GradeIndexItem
+              key={grade.id}
+              grade={grade}
+              deleteGrade={deleteGrade}
+            />)}
+          </tbody>
+        </table>
       </section>
     );
   }

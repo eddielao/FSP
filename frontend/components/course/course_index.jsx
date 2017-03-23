@@ -10,13 +10,21 @@ class CourseIndex extends Component {
     const { courses, deleteCourse, children } = this.props;
     return (
       <section className="item-index">
-        <ul>
-          {courses.map(course => <CourseIndexItem
-            key={course.id}
-            course={course}
-            deleteCourse={deleteCourse}
-          />)}
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {courses.map(course => <CourseIndexItem
+              key={course.id}
+              course={course}
+              deleteCourse={deleteCourse}
+            />)}
+          </tbody>
+        </table>
       </section>
     );
   }
