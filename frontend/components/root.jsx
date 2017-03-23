@@ -27,7 +27,7 @@ const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/');
+      replace('/home/index');
     }
   };
 
@@ -42,7 +42,9 @@ const Root = ({ store }) => {
             onEnter={_redirectIfLoggedIn}
           />
           <Route path="/home" component={ Main } onEnter={_ensureLoggedIn}>
-            <Route path="/home/index" component={ MainIndex } />
+            <Route path="/home/index" component={ MainIndex }
+              onEnter={_ensureLoggedIn}
+            />
             <Route path="/students/index" component={ StudentIndexContainer }
               onEnter={_ensureLoggedIn}
             />
