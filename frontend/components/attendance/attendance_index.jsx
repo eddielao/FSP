@@ -14,7 +14,7 @@ class AttendanceIndex extends Component {
           <thead>
             <tr>
               <th>Present</th>
-              <th>Course ID</th>
+              <th>Course</th>
               <th>Student</th>
               <th className="remove"> </th>
             </tr>
