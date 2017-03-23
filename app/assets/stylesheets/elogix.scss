@@ -121,6 +121,10 @@ a:link:hover {
   width: 233px;
 }
 
+.main-body-index tr {
+  display: flex;
+}
+
 .main-component {
   padding: 1%;
   background-color: lightgray;
@@ -129,8 +133,9 @@ a:link:hover {
 
 .main-logo {
   // width: 20%;
+  background-image: url(http://res.cloudinary.com/eddielao/image/upload/v1490286080/logo.png);
   padding-left: 5px;
-  font-size: medium;
+  font-size: x-large;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -162,8 +167,7 @@ td {
 
 .top-control-bar {
   display: flex;
-  margin-bottom: 1%;
-  padding: 10px;
+  padding: 1%;
   justify-content: space-between;
   width: 100%;
 }

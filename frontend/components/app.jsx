@@ -5,13 +5,13 @@ import Main from './main';
 
 const App = ({ children }) => {
   let body = children;
-  if (window.currentUser === undefined && children === null) {
+  if (window.currentUser === undefined) {
     body = <img className="body" />;
   }
   return (
     <div className="app-container">
       <header className="top-control-bar">
-        <Link to="/"><section className="main-logo">
+        <Link to="/home/index"><section className="main-logo">
           <h1>
             eLogix ST
           </h1>
@@ -20,7 +20,7 @@ const App = ({ children }) => {
           <LoginContainer />
         </div>
       </header>
-        {children}
+        {body}
     </div>
   );
 };
