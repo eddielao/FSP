@@ -14,8 +14,8 @@ class GradeIndex extends Component {
           <thead>
             <tr>
               <th>Grade</th>
-              <th>Course ID</th>
-              <th>Student ID</th>
+              <th>Course</th>
+              <th>Student</th>
               <th> </th>
             </tr>
           </thead>
