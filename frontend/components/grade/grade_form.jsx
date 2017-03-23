@@ -46,7 +46,6 @@ class GradeForm extends React.Component {
   }
 
   listStudents() {
-    console.log('listStudents started');
     return (
       <select
         value={this.state.student_id}
