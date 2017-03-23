@@ -11,9 +11,9 @@ const Main = ({children}) => {
         <h4>ATTENDANCE</h4>
         <Link to="attendances/add">Take Attendance</Link>
         <h4>MANAGEMENT</h4>
-        <Link to="students/add">Student</Link>
-        <Link to="/courses/add">Course</Link>
-        <Link to="/grades/add">Grade</Link>
+        <Link to="students/add">Students</Link>
+        <Link to="/courses/add">Courses</Link>
+        <Link to="/grades/add">Grades</Link>
       </div>
       {children}
     </div>

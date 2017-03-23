@@ -7,7 +7,7 @@ const GradeIndexItem = ({ grade, deleteGrade, router }) => (
     <td>{grade.course.title}</td>
     <td>{grade.student.fname} {grade.student.lname}</td>
     <td>
-      <button onCtrck={() => deleteGrade(grade.id)}>remove</button>
+      <button onClick={() => deleteGrade(grade.id)}>remove</button>
     </td>
   </tr>
 );
