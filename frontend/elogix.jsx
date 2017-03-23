@@ -7,6 +7,7 @@ import configureStore from './store/store';
 import { login } from './actions/session_actions';
 
 import { fetchAllCourses } from './actions/course_actions';
+import { fetchAllStudents } from './actions/student_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,3 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.fetchAllCourses=fetchAllCourses;
+window.fetchAllStudents=fetchAllStudents;

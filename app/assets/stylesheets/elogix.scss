@@ -25,7 +25,12 @@ button:hover {
   color: whitesmoke;
 }
 
-input[type=submit] {
+.errors {
+  font-size: smaller;
+  color: indianred;
+}
+
+input[type=submit], select {
   border: black;
   border-style: solid;
   border-radius: 5px;
@@ -56,7 +61,7 @@ input[type=submit] {
   width: 200px;
 }
 
-input {
+input, select {
   border: gray;
   border-style: groove;
   border-radius: 5px;
@@ -97,11 +102,28 @@ a:link:hover {
   font-size: x-small;
 }
 
-.top-control-bar {
+.main-body {
   display: flex;
-  margin-bottom: 1%;
-  padding: 10px;
-  justify-content: space-between;
+}
+
+.main-body-index,
+.main-body-index {
+  // height: 100%;
+  // width: 100%;
+}
+
+.main-body-index td {
+  border: gray;
+  border-style: groove;
+  border-radius: 3px;
+  display: inline-flex;
+  height: 136px;
+  width: 233px;
+}
+
+.main-component {
+  padding: 1%;
+  background-color: lightgray;
   width: 100%;
 }
 
@@ -111,6 +133,33 @@ a:link:hover {
   font-size: medium;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.main-side-bar {
+  background-color: steelblue;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  white-space: nowrap;
+}
+
+.main-side-bar h4 {
+  font-size: smaller;
+  text-decoration: underline;
+  padding: 9% 0% 1% 0%;
+}
+
+.main-side-bar a {
+  padding: 3%;
+}
+
+.top-control-bar {
+  display: flex;
+  margin-bottom: 1%;
+  padding: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .top-control-bar div {

@@ -1,1 +1,1 @@
-json.extract! student, :fname, :lname, :email
+json.extract! student, :id, :fname, :lname, :email

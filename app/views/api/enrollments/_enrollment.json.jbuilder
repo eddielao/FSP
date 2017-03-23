@@ -1,1 +1,1 @@
-json.extract! enrollment, :course_id, :student_id
+json.extract! enrollment, :id, :course_id, :student_id

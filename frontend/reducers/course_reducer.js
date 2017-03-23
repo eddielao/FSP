@@ -1,13 +1,12 @@
 import {
   RECEIVE_ALL_COURSES,
   RECEIVE_COURSE,
-  RECEIVE_COURSE_ERRORS,
   REMOVE_COURSE
 } from '../actions/course_actions';
+import { RECEIVE_ERRORS } from '../actions/error_actions';
 import merge from 'lodash/merge';
 
 const initialState = {
-  errors: []
 };
 
 const CourseReducer = (state=initialState, action) => {
@@ -18,7 +17,7 @@ const CourseReducer = (state=initialState, action) => {
       return merge({}, state, action.courses);
     case RECEIVE_COURSE:
       return merge({}, state, {[action.course.id]: action.course});
-    case RECEIVE_COURSE_ERRORS:
+    case RECEIVE_ERRORS:
       errors = action.errors;
       return merge({}, state, { errors });
     case REMOVE_COURSE:
