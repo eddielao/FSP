@@ -6,6 +6,8 @@
 
 ## Features & Implementation
 
+eLogix is a simple but effective application for managing students at tutoring centers. Though courses are same everyday, grades and attendances are still tied by student and course.
+
 ### Student Management
 
 Students are stored in one table containing of three columns, fname for first name, lname for last name, and email. Relation to grades and attendances are established with the use of foreign keys pointing back to student ID from the respective tables.
