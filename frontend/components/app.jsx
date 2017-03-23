@@ -13,7 +13,7 @@ const App = ({ children }) => {
       <header className="top-control-bar">
         <Link to="/home/index"><section className="main-logo">
           <h1>
-            eLogix ST
+            eLogix ST<img src="https://res.cloudinary.com/eddielao/image/upload/v1490306710/logo.png" />
           </h1>
         </section></Link>
         <div>
