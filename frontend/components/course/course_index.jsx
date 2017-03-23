@@ -14,7 +14,7 @@ class CourseIndex extends Component {
           <thead>
             <tr>
               <th>Subject</th>
-              <th> </th>
+              <th className="remove"> </th>
             </tr>
           </thead>
           <tbody>

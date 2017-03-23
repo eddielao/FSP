@@ -15,7 +15,7 @@ class StudentIndex extends Component {
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th> </th>
+              <th className="remove"> </th>
             </tr>
           </thead>
           <tbody>

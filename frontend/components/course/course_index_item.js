@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const CourseIndexItem = ({ course, deleteCourse, router }) => (
   <tr>
     <td>{course.title}</td>
-    <td>
+    <td className="remove">
       <button onClick={() => deleteCourse(course.id)}>remove</button>
     </td>
   </tr>

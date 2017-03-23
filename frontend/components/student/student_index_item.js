@@ -6,7 +6,7 @@ const StudentIndexItem = ({ deleteStudent, student, router }) => {
       <tr>
         <td>{student.fname} {student.lname}</td>
         <td>{student.email}</td>
-        <td>
+        <td className="remove">
           <button onClick={() => deleteStudent(student.id)}>remove</button>
         </td>
       </tr>

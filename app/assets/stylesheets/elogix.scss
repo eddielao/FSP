@@ -130,13 +130,12 @@ a:link:hover {
   width: 100%;
 }
 
-.main-component button:hover, input:hover {
+.main-component input:hover {
   background-color: whitesmoke;
   color: black;
 }
 
 .main-component td {
-  padding: 2px;
   padding-left: 5px;
 }
 
@@ -177,7 +176,34 @@ a:link:hover {
 td {
   padding: 2%;
   text-align: center;
-  white-space: nowrap;
+  width: 200px;
+}
+
+td,
+th {
+  border-bottom-style: inset;
+}
+
+th {
+  background-color: dimgray;
+  color: white;
+}
+
+.remove {
+  background-color: white;
+  border-bottom-style: none;
+}
+
+.remove:hover {
+  background-color: whitesmoke;
+}
+
+tbody tr:hover {
+  background-color: lightgray;
+}
+
+tbody td {
+  padding: 1%;
 }
 
 .top-control-bar {

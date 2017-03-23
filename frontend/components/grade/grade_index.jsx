@@ -16,7 +16,7 @@ class GradeIndex extends Component {
               <th>Grade</th>
               <th>Course</th>
               <th>Student</th>
-              <th> </th>
+              <th className="remove"> </th>
             </tr>
           </thead>
           <tbody>

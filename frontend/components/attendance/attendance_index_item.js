@@ -7,7 +7,7 @@ const AttendanceIndexItem = ({ attendance, deleteAttendance, router }) => {
       <td>{attendance.date}</td>
       <td>{attendance.course.title}</td>
       <td>{attendance.student.fname} {attendance.student.lname}</td>
-      <td>
+      <td className="remove">
         <button onClick={() => deleteAttendance(attendance.id)}>remove</button>
       </td>
     </tr>
