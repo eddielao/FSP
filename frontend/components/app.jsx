@@ -16,6 +16,7 @@ const App = ({ children }) => {
             eLogix ST<img src="https://res.cloudinary.com/eddielao/image/upload/v1490306710/logo.png" />
           </h1>
         </section></Link>
+      <div className="slogan">Keeping students on track and on course...</div>
         <div>
           <LoginContainer />
         </div>

@@ -42,6 +42,10 @@ input[type=submit], select {
   margin-right: 1%;
 }
 
+.login-form input[type=submit] {
+  border-color: whitesmoke;
+}
+
 .login-form-box {
   display: flex;
   flex-direction: column;
@@ -116,6 +120,7 @@ a:link:hover {
   border: gray;
   border-style: groove;
   border-radius: 3px;
+  border-width: thin;
   display: inline-flex;
   height: 136px;
   width: 210px;
@@ -183,6 +188,14 @@ a:link:hover {
 
 .main-side-bar a:hover {
   font-weight: bold;
+}
+
+.slogan {
+  font-family: 'Tangerine', cursive;
+  display: flex;
+  flex-direction: column-reverse;
+  color: steelblue;
+  font-size: x-large;
 }
 
 td {
