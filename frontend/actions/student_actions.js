@@ -32,7 +32,9 @@ export const createStudent = student => dispatch => (
 
 export const updateStudent = student => dispatch => (
   StudentAPIUtil.updateStudent(student)
-    .then(updatedStudent => dispatch(receiveStudent(updatedStudent)),
+    .then(updatedStudent => {
+        dispatch(receiveStudent(updatedStudent));
+      },
       err => dispatch(receiveErrors(err.responseJSON)))
 );
 
