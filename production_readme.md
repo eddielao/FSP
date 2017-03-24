@@ -56,7 +56,7 @@ In addition to the features already implemented, I plan to continue to add onto 
 
 ### Attendance Dashboard
 
-A dashboard shows live updates as students check in. Each student that has checked in will be represented by a green dot next to her name and absent student will be represented by a red dot.
+A dashboard shows live updates as students check in. Each student that has checked in will be represented by a green dot next to her name (or a circle around her profile picture) and absent student will be represented by a red dot or circle similarly.
 
 ### Search
 
@@ -66,6 +66,6 @@ There should be a search box on the top bar where it can search all the main com
 
 Users would have different levels of administrative privileges. To start, users can be categorized into 2 levels, super user and regular user. Some privileges that will only be granted under super user are abilities such as editing grades and attendance and removing students. Think of a super user similar to the role of a superintendent where certain administrative rights are exclusive.
 
-### Summary
+## Summary
 
 The intent of this app is to keep it simple while still being user friendly. It does what it suppose to do. With these in mind, all future potential features will continue to enhance functionalities while still keeping the app simple and effective.
