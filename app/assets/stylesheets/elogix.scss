@@ -118,7 +118,7 @@ a:link:hover {
   border-radius: 3px;
   display: inline-flex;
   height: 136px;
-  width: 260px;
+  width: 210px;
 }
 
 .main-body-index tr {
@@ -170,17 +170,15 @@ a:link:hover {
   padding: 1%;
   white-space: nowrap;
   margin-right: 5px;
-  width: 7%;
+  // width: 7%;
 }
 
 .main-side-bar h4 {
+  color: antiquewhite;
   font-size: smaller;
   text-decoration: underline;
-  padding: 9% 0% 1% 0%;
-}
-
-.main-side-bar a {
-  padding: 3%;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .main-side-bar a:hover {
