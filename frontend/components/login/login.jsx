@@ -11,7 +11,7 @@ class Login extends React.Component {
   handleGuest(e) {
     e.preventDefault();
     this.props.guestLogin()
-      .then(() => this.props.router.push("/home"));
+      .then(() => this.props.router.push("/home/index"));
   }
 
   handleLogout(e) {
