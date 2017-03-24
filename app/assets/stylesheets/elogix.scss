@@ -169,6 +169,8 @@ a:link:hover {
   height: 600px;
   padding: 1%;
   white-space: nowrap;
+  margin-right: 5px;
+  width: 7%;
 }
 
 .main-side-bar h4 {
@@ -189,6 +191,11 @@ td {
   padding: 2%;
   text-align: center;
   width: 200px;
+}
+
+td a {
+  display: flex;
+  width: 100%;
 }
 
 td input {

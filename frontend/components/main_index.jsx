@@ -9,22 +9,30 @@ const MainIndex = ({children}) => {
         <tbody>
           <tr>
             <td>
-              <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243301/take_attendance.png" />
-              <Link to="/attendances/add" className="take_attendance">Take Attendance</Link>
+              <Link to="/attendances/add" className="take_attendance">
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243301/take_attendance.png" />
+                Take Attendance
+              </Link>
             </td>
             <td>
-              <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243656/mange_courses.png" />
-              <Link to="/courses/add">Manage Courses</Link>
+              <Link to="/courses/add">
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243656/mange_courses.png" />
+                Manage Courses
+              </Link>
             </td>
           </tr>
           <tr>
             <td>
-              <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243539/manage_students.png" />
-              <Link to="/students/add">Manage Students</Link>
+              <Link to="/students/add">
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243539/manage_students.png" />
+                Manage Students
+              </Link>
             </td>
             <td>
-              <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243870/record_grades.png" />
-              <Link to="/grades/add">Record Grades</Link>
+              <Link to="/grades/add">
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490243870/record_grades.png" />
+                Record Grades
+              </Link>
             </td>
           </tr>
         </tbody>
