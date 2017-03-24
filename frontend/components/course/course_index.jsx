@@ -7,7 +7,7 @@ class CourseIndex extends Component {
   }
 
   render() {
-    const { courses, deleteCourse, updateCourse, children } = this.props;
+    const { courses, deleteCourse, updateCourse } = this.props;
     return (
       <section className="item-index">
         <table>

@@ -17,9 +17,6 @@ const CourseReducer = (state=initialState, action) => {
       return merge({}, state, action.courses);
     case RECEIVE_COURSE:
       return merge({}, state, {[action.course.id]: action.course});
-    case RECEIVE_ERRORS:
-      errors = action.errors;
-      return merge({}, state, { errors });
     case REMOVE_COURSE:
       let newState = merge({}, state);
       delete newState[action.course.id];
