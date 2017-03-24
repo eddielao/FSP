@@ -23,6 +23,7 @@ class CourseIndexItem extends React.Component {
   }
 
   updateField(e) {
+    e.preventDefault();
     this.setState({title: e.target.value});
   }
 

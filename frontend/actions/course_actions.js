@@ -32,7 +32,8 @@ export const createCourse = course => dispatch => (
 
 export const updateCourse = course => dispatch => (
   CourseAPIUtil.updateCourse(course)
-    .then(updatedCourse => dispatch(receiveCourse(updatedCourse)))
+    .then(updatedCourse => dispatch(receiveCourse(updatedCourse)),
+      err => dispatch(receiveErrors(err.responseJSON)))
 );
 
 export const removeCourse = course => ({

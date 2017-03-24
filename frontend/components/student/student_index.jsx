@@ -7,13 +7,14 @@ class StudentIndex extends Component {
   }
 
   render() {
-    const { deleteStudent, students, children } = this.props;
+    const { deleteStudent, students, updateStudent, children } = this.props;
     return (
       <section className="item-index">
         <table>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Email</th>
               <th className="remove"> </th>
             </tr>
@@ -23,6 +24,7 @@ class StudentIndex extends Component {
               key={student.id}
               student={student}
               deleteStudent={deleteStudent}
+              updateStudent={updateStudent}
               />)}
           </tbody>
         </table>

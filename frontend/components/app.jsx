@@ -20,7 +20,7 @@ const App = ({ children }) => {
           <LoginContainer />
         </div>
       </header>
-        {body}
+        {children}
     </div>
   );
 };

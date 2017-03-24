@@ -30,6 +30,12 @@ export const createStudent = student => dispatch => (
       err => dispatch(receiveErrors(err.responseJSON)))
 );
 
+export const updateStudent = student => dispatch => (
+  StudentAPIUtil.updateStudent(student)
+    .then(updatedStudent => dispatch(receiveStudent(updatedStudent)),
+      err => dispatch(receiveErrors(err.responseJSON)))
+);
+
 export const removeStudent = student => ({
   type: REMOVE_STUDENT,
   student
