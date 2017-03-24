@@ -30,6 +30,11 @@ export const createCourse = course => dispatch => (
       err => dispatch(receiveErrors(err.responseJSON)))
 );
 
+export const updateCourse = course => dispatch => (
+  CourseAPIUtil.updateCourse(course)
+    .then(updatedCourse => dispatch(receiveCourse(updatedCourse)))
+);
+
 export const removeCourse = course => ({
   type: REMOVE_COURSE,
   course

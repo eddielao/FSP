@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import CourseIndex from './course_index';
 import {
   fetchAllCourses,
-  deleteCourse } from '../../actions/course_actions';
+  deleteCourse,
+  updateCourse } from '../../actions/course_actions';
 import { selectAllCourses } from '../../reducers/course_selectors';
 
 const mapStateToProps = state => ({
@@ -11,7 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   deleteCourse: id => dispatch(deleteCourse(id)),
-  fetchAllCourses: () => dispatch(fetchAllCourses())
+  fetchAllCourses: () => dispatch(fetchAllCourses()),
+  updateCourse: course => dispatch(updateCourse(course))
 });
 
 export default connect(

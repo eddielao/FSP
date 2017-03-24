@@ -26,3 +26,11 @@ export const deleteCourse = id => (
     url: `/api/courses/${id}`
   })
 );
+
+export const updateCourse = course => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/courses/${course.id}`,
+    data: {course}
+  })
+);

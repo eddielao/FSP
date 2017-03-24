@@ -186,6 +186,10 @@ td {
   width: 200px;
 }
 
+td input {
+  border-style: hidden;
+}
+
 td,
 th {
   border-bottom-style: inset;
