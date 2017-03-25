@@ -12,6 +12,7 @@ import CourseIndexContainer from './course/course_index_container';
 import GradeFormContainer from './grade/grade_form_container';
 import Main from './main';
 import MainIndex from './main_index';
+import Splash from './splash';
 import StudentFormContainer from './student/student_form_container';
 import StudentIndexContainer from './student/student_index_container';
 
@@ -35,6 +36,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
+          <IndexRoute component={ Splash } />
           <Route path="/login" component={ SessionFormContainer }
             onEnter={_redirectIfLoggedIn}
           />
