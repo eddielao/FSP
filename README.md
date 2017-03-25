@@ -1,6 +1,6 @@
 # eLogix Student Tracker
 
-[eLogix Live](https://elogix-student-tracker.herokuapp.com/#/login)
+[eLogix Live](https://elogix-student-tracker.herokuapp.com/)
 
 ## Features & Implementation
 
