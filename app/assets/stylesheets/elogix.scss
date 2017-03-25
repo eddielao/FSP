@@ -199,10 +199,13 @@ a:link:hover {
 }
 
 .splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  font-family: 'Fredericka the Great', cursive;
   font-size: -webkit-xxx-large;
   color: whitesmoke;
-  font-family: 'Tangerine', cursive;
   height: 800px;
   background-image: url(https://www.myattendancetracker.com/img/proui-2.0/frontend/math-student.jpg);
 }
