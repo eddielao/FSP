@@ -10,7 +10,7 @@ const MainIndex = ({children}) => {
           <tr>
             <td>
               <Link to="/attendances/add" className="take_attendance">
-                <img src="http://res.cloudinary.com/eddielao/image/upload/v1490390184/attendance.png" />
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490390184/attendance.png" />
                 Take Attendance
               </Link>
             </td>
