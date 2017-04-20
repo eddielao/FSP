@@ -2,10 +2,6 @@
 <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 <script type="text/javascript">
-	var http = require("http");
-	setInterval(function() {
-    http.get("https://elogix-student-tracker.herokuapp.com");
-		}, 1500000);
   <% if logged_in? %>
     window.currentUser = <%= render(
       "api/users/user.json.jbuilder",

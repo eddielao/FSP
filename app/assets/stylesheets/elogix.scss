@@ -4,24 +4,30 @@
 }
 
 .body {
-  height: 800px;
   background-image: url(http://mc.umt.edu/learning-center/images/apple_chalkboard.jpg);
+  height: 800px;
+}
+
+body {
+  margin-top: 10px;
 }
 
 button {
-  border: black;
+  color: white;
+  font-weight: bold;
+  background-color: #2b8fd1;
+  border: 0;
   border-style: solid;
-  border-radius: 5px;
-  font-size: smaller;
-  padding-left: 1%;
-  padding-right: 1%;
-  box-shadow: black 0 2px 5px;
-  border-width: thin;
+  border-radius: 3px;
+  font-size: 16px;
+  /*box-shadow: black 0 2px 5px;*/
   margin: 0px 5px;
+  padding: 10px 16px;
 }
 
 button:hover {
-  background-color: gray;
+  background-color: #3276b1;
+  border-color: #285e8e;
   color: whitesmoke;
 }
 
