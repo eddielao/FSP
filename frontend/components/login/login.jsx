@@ -24,8 +24,8 @@ class Login extends React.Component {
     return (
       <div>
         <nav className="login-signup">
-          <Link to="/login" activeClassName="current">Login</Link>
-          <Link to="/signup" activeClassName="current">Sign up!</Link>
+          <Link to="/login" activeClassName="current">LOGIN</Link>
+          <Link to="/signup" activeClassName="current">SIGN UP</Link>
           <button onClick={this.handleGuest}>guest</button>
         </nav>
       </div>
