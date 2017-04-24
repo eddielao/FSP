@@ -55,6 +55,11 @@ input[type=submit], select {
   margin-right: 1%;
 }
 
+input::placeholder {
+  background-color: gray;
+  color: whitesmoke;
+}
+
 .login-form input[type=submit] {
   border-color: whitesmoke;
 }
@@ -62,25 +67,23 @@ input[type=submit], select {
 .login-form-box {
   display: flex;
   flex-direction: column;
-  border: gray;
-  border-style: groove;
-  height: 200px;
+  font-size: large;
+  height: 250px;
   margin-bottom: 20%;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 5%;
   padding: 1%;
   padding-top: 2%;
-  border-radius: 5px;
+  border-radius: 2px;
   text-align: center;
-  background-color: black;
+  background-color: $blue-hover-color;
   opacity: 0.8;
-  width: 200px;
+  width: 250px;
 }
 
 input, select {
   border: gray;
-  border-style: groove;
   border-radius: 5px;
   margin: 1%;
 }
