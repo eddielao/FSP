@@ -10,13 +10,15 @@ const MainIndex = ({children}) => {
           <tr>
             <td>
               <Link to="/attendances/add" className="take_attendance">
-                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490390184/attendance.png" />
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1493049714/calendar_jahrba.png" />
                 Take Attendance
               </Link>
             </td>
+          </tr>
+          <tr>
             <td>
               <Link to="/courses/add">
-                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490390421/courses.png" />
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1493049714/courses_he2znr.png" />
                 Manage Courses
               </Link>
             </td>
@@ -24,13 +26,15 @@ const MainIndex = ({children}) => {
           <tr>
             <td>
               <Link to="/students/add">
-                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490390749/student.png" />
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1493049714/students_ihix8y.png" />
                 Manage Students
               </Link>
             </td>
+          </tr>
+          <tr>
             <td>
               <Link to="/grades/add">
-                <img src="https://res.cloudinary.com/eddielao/image/upload/v1490390862/grades.png" />
+                <img src="https://res.cloudinary.com/eddielao/image/upload/v1493049714/grades_dbyuok.png" />
                 Record Grades
               </Link>
             </td>
