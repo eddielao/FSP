@@ -164,12 +164,18 @@ a:link:hover {
   width: 100%;
 }
 
+.main-body-index td:hover {
+}
+
 .main-body-index td a {
+  color: $blue-theme-color;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  letter-spacing: 5px;
   padding-left: 2%;
   padding-right: 2%;
+  width: 100%;
+  word-spacing: 5px;
 }
 
 .main-body-index td span {
@@ -222,8 +228,9 @@ a:link:hover {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
+  font-family: $splash-font;
   font-size: initial;
-  height: 600px;
+  height: 700px;
   padding: 1%;
   white-space: nowrap;
   margin-right: 5px;
@@ -233,7 +240,7 @@ a:link:hover {
 .main-side-bar h4 {
   color: antiquewhite;
   font-size: smaller;
-  text-decoration: underline;
+  text-decoration: overline;
   padding-top: 10px;
   padding-bottom: 5px;
 }
