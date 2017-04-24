@@ -22,6 +22,9 @@ module.exports = {
   },
   devtool: 'source-maps',
   resolve: {
+    alias: {
+      config: path.join(__dirname, 'config', process.env.NODE_ENV)
+    },
     extensions: ["", ".js", ".jsx" ]
   },
   plugins: [
