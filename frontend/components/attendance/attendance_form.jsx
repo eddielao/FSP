@@ -92,6 +92,7 @@ class AttendanceForm extends React.Component {
     return (
       <div className="main-component">
         <form onSubmit={this.handleSubmit} className="add-attendance">
+          <div className="dateLabel"><label>Select date</label></div>
           <DayPicker
             initialMonth={ new Date(2017, 3) }
             selectedDays={this.state.iday}

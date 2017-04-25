@@ -54,17 +54,17 @@ class StudentForm extends React.Component {
           <input type="text"
             value={this.state.fname}
             onChange={this.update("fname")}
-            placeholder="First Name"
+            placeholder="Enter First Name"
             />
           <input type="text"
             value={this.state.lname}
             onChange={this.update("lname")}
-            placeholder="Last Name"
+            placeholder="Enter Last Name"
             />
           <input type="email"
             value={this.state.email}
             onChange={this.update("email")}
-            placeholder="Email"
+            placeholder="Enter Email"
             />
           <input type="submit" value="Add Student" />
           {this.renderErrors()}

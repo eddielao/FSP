@@ -43,7 +43,7 @@ class CourseForm extends React.Component {
           <input type="text"
             value={this.state.title}
             onChange={this.update("title")}
-            placeholder="Title"
+            placeholder="Enter Title"
             />
           <input type="submit" value="Create Course" />
           {this.renderErrors()}

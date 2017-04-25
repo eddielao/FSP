@@ -5,6 +5,14 @@ $faked-blue-bg: #eaedf1;
 $site-font: 'Roboto', sans-serif;
 $splash-font: 'Fredericka the Great', cursive;
 
+.add-attendance label {
+  color: $blue-theme-color;
+  font-weight: bold;
+  background-color: $faked-blue-bg;
+  font-size: 16px;
+  width: 300px;
+}
+
 .app-container {
   font-family: $site-font;
   white-space: normal;
@@ -27,7 +35,6 @@ button {
   border-style: solid;
   border-radius: 1px;
   font-size: 16px;
-  /*box-shadow: black 0 2px 5px;*/
   margin: 0px 5px;
   padding: 10px 16px;
 }
@@ -38,25 +45,32 @@ button:hover {
   color: whitesmoke;
 }
 
+.dateLabel {
+  display: flex;
+  text-align: center;
+  width: 300px;
+}
+
 .errors {
   font-size: smaller;
   color: indianred;
 }
 
-input[type=submit], select {
-  border: black;
+input[type=submit] {
+  color: white;
+  font-weight: bold;
+  background-color: $blue-theme-color;
+  border: 0;
   border-style: solid;
-  border-radius: 3px;
-  padding-left: 1%;
-  padding-right: 1%;
-  border-width: thin;
-  margin-left: 1%;
-  margin-right: 1%;
+  border-radius: 1px;
+  font-size: 16px;
+  margin: 0px 5px;
+  padding: 10px 16px;
 }
 
 input::placeholder {
-  background-color: gray;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: dimgray;
 }
 
 .login-form input[type=submit] {
@@ -83,7 +97,11 @@ input::placeholder {
 
 input, select {
   border: gray;
-  border-radius: 5px;
+  border-radius: 3px;
+  border-style: groove;
+  border-width: thin;
+  color: dimgray;
+  font-size: medium;
   margin: 1%;
 }
 
@@ -190,9 +208,11 @@ a:link:hover {
 }
 
 .main-component {
+  background-color: $faked-blue-bg;
   border: steelblue;
   border-bottom-style: inset;
   border-width: thin;
+  height: 700px;
   padding: 1%;
   width: 100%;
 }
@@ -232,7 +252,7 @@ a:link:hover {
   flex-direction: column;
   font-family: $splash-font;
   font-size: initial;
-  height: 700px;
+  height: 100;
   padding: 1%;
   white-space: nowrap;
   margin-right: 5px;
@@ -298,12 +318,8 @@ th {
 }
 
 .remove {
-  background-color: white;
+  background-color: $faked-blue-bg;
   border-bottom-style: none;
-}
-
-.remove:hover {
-  background-color: white;
 }
 
 .item-index tbody tr:hover {

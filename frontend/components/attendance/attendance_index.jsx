@@ -13,7 +13,7 @@ class AttendanceIndex extends Component {
         <table>
           <thead>
             <tr>
-              <th>Present</th>
+              <th>Day Present</th>
               <th>Course</th>
               <th>Student</th>
               <th className="remove"> </th>
