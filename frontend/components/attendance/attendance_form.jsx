@@ -24,7 +24,7 @@ class AttendanceForm extends React.Component {
   handleDayClick(day, {disabled, selected}) {
     let formatted = dateFormat(day, "isoDate");
     this.setState({
-      iday: selected ? null : day,
+      iday: selected ? null : day, //Added to bypass console proptypes warning
       date: formatted
     })
   }
@@ -34,7 +34,6 @@ class AttendanceForm extends React.Component {
     const attendance = this.state;
     this.props.createAttendance({ attendance })
       .then(this.setState({
-        iday: '',
         date: '',
         course_id: '',
         student_id: ''
