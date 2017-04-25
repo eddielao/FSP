@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import AttendanceIndexContainer from './attendance_index_container';
+import DayPicker from 'react-day-picker';
+import dateFormat from 'dateformat';
 
 class AttendanceForm extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class AttendanceForm extends React.Component {
       course_id: '',
       student_id: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDayClick = this.handleDayClick.bind(this);
   }
 
   componentDidMount() {
@@ -18,11 +21,20 @@ class AttendanceForm extends React.Component {
     this.props.clearErrors();
   }
 
+  handleDayClick(day, {disabled, selected}) {
+    let formatted = dateFormat(day, "isoDate");
+    this.setState({
+      iday: selected ? null : day,
+      date: formatted
+    })
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const attendance = this.state;
     this.props.createAttendance({ attendance })
       .then(this.setState({
+        iday: '',
         date: '',
         course_id: '',
         student_id: ''
@@ -81,11 +93,11 @@ class AttendanceForm extends React.Component {
     return (
       <div className="main-component">
         <form onSubmit={this.handleSubmit} className="add-attendance">
-          <input type="date"
-            value={this.state.date}
-            onChange={this.update("date")}
-            placeholder="Date"
-            />
+          <DayPicker
+            initialMonth={ new Date(2017, 3) }
+            selectedDays={this.state.iday}
+            onDayClick={this.handleDayClick}
+          />
           {this.listCourses()}
           {this.listStudents()}
           <input type="submit" value="Add Attendance" />
