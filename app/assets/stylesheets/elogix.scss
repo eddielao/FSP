@@ -253,9 +253,9 @@ a:link:hover {
   font-family: $splash-font;
   font-size: initial;
   height: 100;
-  padding: 1%;
+  padding-left: 10px;
+  padding-top: 3px;
   white-space: nowrap;
-  margin-right: 5px;
   width: 150px;
 }
 
@@ -274,11 +274,12 @@ a:link:hover {
 
 .main-side-bar li a {
   display: block;
+  font-family: $site-font;
   padding: 5px;
 }
 
 .main-side-bar .selected {
-  background-color: whitesmoke;
+  background-color: $faked-blue-bg;
   color: $blue-theme-color;
 }
 

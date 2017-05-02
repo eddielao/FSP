@@ -13,6 +13,10 @@ class CourseIndexItem extends React.Component {
     this.setState({title: e.target.value});
   }
 
+          // Removed course causes existing grade render error
+          // <button onClick={() => this.props.deleteCourse(this.state.id)}>
+          //   remove
+          // </button>
   render() {
     return (
       <tr>
@@ -21,9 +25,6 @@ class CourseIndexItem extends React.Component {
           defaultValue={this.state.title} />
         </td>
         <td className="remove">
-          <button onClick={() => this.props.deleteCourse(this.state.id)}>
-            remove
-          </button>
           <button onClick={() => this.props.updateCourse(this.state)}>
             update
           </button>

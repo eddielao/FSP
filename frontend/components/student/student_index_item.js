@@ -24,6 +24,10 @@ class StudentIndexItem extends React.Component {
   }
 
   render() {
+          // Removed student causes grade render error
+          // <button onClick={() => this.props.deleteStudent(this.state.id)}>
+          //   remove
+          // </button>
     return (
       <tr>
         <td><input type="text" onChange={this.update('fname')}
@@ -36,9 +40,6 @@ class StudentIndexItem extends React.Component {
           defaultValue={this.state.email} />
         </td>
         <td className="remove">
-          <button onClick={() => this.props.deleteStudent(this.state.id)}>
-            remove
-          </button>
           <button onClick={() => this.props.updateStudent(this.state)}>
             update
           </button>
