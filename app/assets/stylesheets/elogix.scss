@@ -277,6 +277,11 @@ a:link:hover {
   padding: 5px;
 }
 
+.main-side-bar .selected {
+  background-color: whitesmoke;
+  color: $blue-theme-color;
+}
+
 .slogan {
   font-family: $splash-font;
   opacity: 0.65;
