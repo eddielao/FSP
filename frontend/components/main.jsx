@@ -7,13 +7,19 @@ const Main = ({children}) => {
   return (
     <div className="main-body">
       <div className="main-side-bar">
-        <Link to="/home/index">Home</Link>
-        <h4>ATTENDANCE</h4>
-        <Link to="attendances/add">Take Attendance</Link>
-        <h4>MANAGEMENT</h4>
-        <Link to="students/add">Students</Link>
-        <Link to="/courses/add">Courses</Link>
-        <Link to="/grades/add">Grades</Link>
+        <ul>
+          <li><Link to="/home/index">Home</Link></li>
+        </ul>
+          <h4>ATTENDANCE</h4>
+        <ul>
+          <li><Link to="attendances/add">Take Attendance</Link></li>
+        </ul>
+          <h4>MANAGEMENT</h4>
+        <ul>
+          <li><Link to="students/add">Students</Link></li>
+          <li><Link to="/courses/add">Courses</Link></li>
+          <li><Link to="/grades/add">Grades</Link></li>
+        </ul>
       </div>
       {children}
     </div>

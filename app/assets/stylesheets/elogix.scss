@@ -268,7 +268,13 @@ a:link:hover {
 }
 
 .main-side-bar a:hover {
+  background-color: $blue-hover-color;
   font-weight: bold;
+}
+
+.main-side-bar li a {
+  display: block;
+  padding: 5px;
 }
 
 .slogan {
