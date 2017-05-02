@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Modal from '../modal/modal';
 
 // const StudentIndexItem = ({ deleteStudent, student, router }) => {
 //   return (

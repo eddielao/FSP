@@ -9,8 +9,8 @@ import { login } from './actions/session_actions';
 import { fetchAllCourses } from './actions/course_actions';
 import { fetchAllStudents } from './actions/student_actions';
 
-document.addEventListener('DOMContentLoaded', () => {
   let store;
+document.addEventListener('DOMContentLoaded', () => {
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);
@@ -24,3 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.fetchAllCourses=fetchAllCourses;
 window.fetchAllStudents=fetchAllStudents;
+
+export default store;
