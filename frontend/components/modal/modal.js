@@ -1,10 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import store from '../../storejs';
+import { Provider } from 'react-redux';
 
-export default ({ children }) => {
-  return (
-    <div className="modal">
-      {children}
-      <button>close</button>
-    </div>
-  );
-};
+class Modal extends Component {
+	constructor(props) {
+		super(props);
+		this.closeModal = this.closeModal.bind(this);
+	}
+
+  componentDidMount() {
+    this.modalTarget = document.createElement('div');
+    this.modalTarget.className = 'modal';
+    document.body.appendChild(this.modalTarget);
+    this._render();
+  }
+
+  componentWillUpdate() {
+    this._render();
+  }
+
+  componentWillUnmount() {
+    ReactDOM.unmountComponentAtNode(this.modalTarget);
+    document.body.removeChild('this.modalTarget');
+  }
+
+  closeModal() {
+  	ReactDOM.unmountComponentAtNode(this.modalTarget);
+    document.body.removeChild(this.modalTarget);
+  }
+
+  _render() {
+    ReactDOM.render(
+      <Provider store={store}>
+        <div>{this.props.children}
+        <button onClick={this.closeModal()}>close</button>
+        </div>
+      </Provider>,
+      this.modalTarget
+    );
+  }
+
+  render() {
+    return <noscript />;
+  }
+}
+
+export default Modal;

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-redux';
 import { Link } from 'react-router';
 import Modal from '../modal/modal';
 
@@ -24,6 +25,10 @@ class StudentIndexItem extends React.Component {
     return e => this.setState({ [property]: e.target.value });
   }
 
+  showModal() {
+
+  }
+
   render() {
           // Removed student causes grade render error
           // <button onClick={() => this.props.deleteStudent(this.state.id)}>
@@ -44,6 +49,7 @@ class StudentIndexItem extends React.Component {
           <button onClick={() => this.props.updateStudent(this.state)}>
             update
           </button>
+          <button onClick={() => this.showModal()}>modal</button>
         </td>
       </tr>
     );

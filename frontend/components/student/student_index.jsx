@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StudentIndexItem from './student_index_item';
+import Modal from '../modal/modal';
 
 class StudentIndex extends Component {
   componentDidMount() {
@@ -9,6 +10,7 @@ class StudentIndex extends Component {
   render() {
     const { deleteStudent, students, updateStudent, children } = this.props;
     return (
+      <Modal>
       <section className="item-index">
         <table>
           <thead>
@@ -29,6 +31,7 @@ class StudentIndex extends Component {
           </tbody>
         </table>
       </section>
+        </Modal>
     );
   }
 }
