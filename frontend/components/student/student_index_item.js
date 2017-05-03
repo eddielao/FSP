@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
+import { style } from '../modal/modal_style';
 
 // const StudentIndexItem = ({ deleteStudent, student, router }) => {
 //   return (
@@ -26,6 +27,7 @@ class StudentIndexItem extends React.Component {
                 };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.updateClose = this.updateClose.bind(this);
   }
 
   openModal() {
@@ -40,6 +42,11 @@ class StudentIndexItem extends React.Component {
     return e => this.setState({ [property]: e.target.value });
   }
 
+  updateClose() {
+    this.props.updateStudent(this.state)
+      .then(this.setState({ modalOpen: false}));
+  }
+
   render() {
           // Removed student causes grade render error
           // <button onClick={() => this.props.deleteStudent(this.state.id)}>
@@ -47,34 +54,29 @@ class StudentIndexItem extends React.Component {
           // </button>
     return (
       <tr>
-        <td><input type="text" onChange={this.update('fname')}
-          defaultValue={this.state.fname} />
-        </td>
-        <td><input type="text" onChange={this.update('lname')}
-          defaultValue={this.state.lname} />
-        </td>
-        <td><input type="email" onChange={this.update('email')}
-          defaultValue={this.state.email} />
-        </td>
-        <td className="remove">
-          <button onClick={() => this.props.updateStudent(this.state)}>
-            update
-          </button>
+        <td>{this.props.student.fname}</td>
+        <td>{this.props.student.lname}</td>
+        <td>{this.props.student.email}</td>
+        <td>
           <button onClick={() => this.openModal()}>
-            open
+            edit
           </button>
           <Modal
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}
-          >
+            style={style}
+            contentLabel="Modal">
             <input type="text" onChange={this.update('fname')}
               defaultValue={this.state.fname} />
             <input type="text" onChange={this.update('lname')}
               defaultValue={this.state.lname} />
             <input type="email" onChange={this.update('email')}
               defaultValue={this.state.email} />
-            <button onClick={() => this.props.updateStudent(this.state)}>
+            <button onClick={() => this.updateClose()}>
               save
+            </button>
+            <button onClick={() => this.closeModal()}>
+              close
             </button>
           </Modal>
         </td>

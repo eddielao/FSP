@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import StudentIndexItem from './student_index_item';
-import Modal from 'react-modal';
 
 class StudentIndex extends Component {
   constructor(props) {
     super(props);
     this.state = {modalOpen: false};
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchAllStudents();
-  }
-
-  handleClick() {
-    this.setState({ modalOpen: true});
   }
 
   render() {
@@ -40,11 +34,6 @@ class StudentIndex extends Component {
               />)}
           </tbody>
         </table>
-        <Modal
-          isOpen={this.state.modalOpen}
-        >
-          ...content
-        </Modal>
       </section>
     );
   }
