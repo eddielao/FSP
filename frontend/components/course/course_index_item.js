@@ -1,11 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Modal from 'react-modal';
+import { style } from '../modal/modal_style';
 
 class CourseIndexItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.course;
+    this.state = {
+                  id: props.course.id,
+                  title: props.course.title,
+                  modalOpen: false
+                };
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.updateField=this.updateField.bind(this);
+  }
+
+  openModal() {
+    this.setState({ modalOpen: true});
+  }
+
+  closeModal() {
+    this.setState({ modalOpen: false});
   }
 
   updateField(e) {

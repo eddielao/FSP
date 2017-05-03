@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Modal from 'react-modal';
+import { style } from '../modal/modal_style';
 
 const AttendanceIndexItem = ({ attendance, deleteAttendance, router }) => {
   return (

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import StudentIndexItem from './student_index_item';
 
 class StudentIndex extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {modalOpen: false};
+  }
+
   componentDidMount() {
     this.props.fetchAllStudents();
   }
@@ -24,6 +29,7 @@ class StudentIndex extends Component {
               key={student.id}
               student={student}
               deleteStudent={deleteStudent}
+              handleClick={this.handleClick}
               updateStudent={updateStudent}
               />)}
           </tbody>
