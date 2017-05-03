@@ -43,6 +43,9 @@ class StudentIndexItem extends React.Component {
           <button onClick={() => this.props.updateStudent(this.state)}>
             update
           </button>
+          <button onClick={() => this.props.handleClick()}>
+            open
+          </button>
         </td>
       </tr>
     );
