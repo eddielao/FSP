@@ -66,18 +66,22 @@ class StudentIndexItem extends React.Component {
             onRequestClose={this.closeModal}
             style={style}
             contentLabel="Modal">
-            <input type="text" onChange={this.update('fname')}
-              defaultValue={this.state.fname} />
-            <input type="text" onChange={this.update('lname')}
-              defaultValue={this.state.lname} />
-            <input type="email" onChange={this.update('email')}
-              defaultValue={this.state.email} />
-            <button onClick={() => this.updateClose()}>
-              save
-            </button>
-            <button onClick={() => this.closeModal()}>
-              close
-            </button>
+            <div className="modalInput">
+              <input type="text" onChange={this.update('fname')}
+                defaultValue={this.state.fname} />
+              <input type="text" onChange={this.update('lname')}
+                defaultValue={this.state.lname} />
+              <input type="email" onChange={this.update('email')}
+                defaultValue={this.state.email} />
+            </div>
+            <div className="modalButton">
+              <button onClick={() => this.updateClose()}>
+                save
+              </button>
+              <button onClick={() => this.closeModal()}>
+                close
+              </button>
+            </div>
           </Modal>
         </td>
       </tr>
