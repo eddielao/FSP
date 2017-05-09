@@ -12,6 +12,7 @@ gem 'figaro'
 gem 'bcrypt'
 gem 'autoprefixer-rails'
 gem 'listen'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'pry-rails'
