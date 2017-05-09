@@ -353,14 +353,26 @@ td .Absent {
   border-radius: 20px;
 }
 
+td .Absent:hover {
+  cursor: default;
+}
+
 td .Present {
   background-color: $present-color;
   border-radius: 20px;
 }
 
+td .Present:hover {
+  cursor: default;
+}
+
 td .Tardy {
   background-color: $tardy-color;
   border-radius: 20px;
+}
+
+td .Tardy:hover {
+  cursor: default;
 }
 
 td,
