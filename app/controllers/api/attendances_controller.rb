@@ -30,7 +30,11 @@ class Api::AttendancesController < ApplicationController
     private
 
     def attendance_params
-      params.require(:attendance).permit(:date, :course_id, :student_id)
+      params.require(:attendance).permit(
+                                    :date,
+                                    :course_id,
+                                    :student_id,
+                                    :status)
     end
 
 end

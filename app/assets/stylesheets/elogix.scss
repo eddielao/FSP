@@ -1,6 +1,9 @@
+$absent-color: #aad178;
 $blue-theme-color: #2b8fd1;
 $blue-hover-color: #3276b1;
 $faked-blue-bg: #eaedf1;
+$present-color: #6ad2eb;
+$tardy-color: #f7be64;
 
 $site-font: 'Roboto', sans-serif;
 $splash-font: 'Fredericka the Great', cursive;
@@ -108,6 +111,10 @@ input, select {
   color: dimgray;
   font-size: medium;
   margin: 1%;
+}
+
+.item-index tbody tr:hover {
+  background-color: lightgray;
 }
 
 .login-signup {
@@ -341,6 +348,33 @@ td input {
   border-style: hidden;
 }
 
+td .Absent {
+  background-color: $absent-color;
+  border-radius: 20px;
+}
+
+td .Absent:hover {
+  cursor: default;
+}
+
+td .Present {
+  background-color: $present-color;
+  border-radius: 20px;
+}
+
+td .Present:hover {
+  cursor: default;
+}
+
+td .Tardy {
+  background-color: $tardy-color;
+  border-radius: 20px;
+}
+
+td .Tardy:hover {
+  cursor: default;
+}
+
 td,
 th {
   border-bottom-style: inset;
@@ -355,10 +389,6 @@ th {
 .remove {
   background-color: $faked-blue-bg;
   border-bottom-style: none;
-}
-
-.item-index tbody tr:hover {
-  background-color: lightgray;
 }
 
 tbody td {

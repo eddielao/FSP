@@ -22,11 +22,31 @@ math = Course.create!(title: 'Math')
 science = Course.create!(title: 'Science')
 
 Attendance.destroy_all
-attendance1 = Attendance.create!(date: '2017-03-06', course_id: math.id, student_id: mia.id)
-attendance2 = Attendance.create!(date: '2017-03-07', course_id: english.id, student_id: collins.id)
-attendance3 = Attendance.create!(date: '2017-03-08', course_id: science.id, student_id: ian.id)
-attendance4 = Attendance.create!(date: '2016-03-09', course_id: english.id, student_id: eddie.id)
-attendance5 = Attendance.create!(date: '2016-03-10', course_id: math.id, student_id: mia.id)
+attendance1 = Attendance.create!(
+                date: '2017-03-06',
+                course_id: math.id,
+                student_id: mia.id,
+                status: 'Present')
+attendance2 = Attendance.create!(
+                date: '2017-03-07',
+                course_id: english.id,
+                student_id: collins.id,
+                status: 'Tardy')
+attendance3 = Attendance.create!(
+                date: '2017-03-08',
+                course_id: science.id,
+                student_id: ian.id,
+                status: "Present")
+attendance4 = Attendance.create!(
+                date: '2016-03-09',
+                course_id: english.id,
+                student_id: eddie.id,
+                status: "Absent")
+attendance5 = Attendance.create!(
+                date: '2016-03-10',
+                course_id: math.id,
+                student_id: mia.id,
+                status: "Tardy")
 
 Grade.destroy_all
 grade1 = Grade.create!(grade: 'A', course_id: math.id, student_id: mia.id)

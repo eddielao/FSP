@@ -10,7 +10,9 @@ class AttendanceForm extends React.Component {
     this.state = {
       date: '',
       course_id: '',
-      student_id: '' };
+      student_id: '',
+      status: ''
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDayClick = this.handleDayClick.bind(this);
   }
@@ -26,7 +28,7 @@ class AttendanceForm extends React.Component {
     this.setState({
       iday: selected ? null : day, //Added to bypass console proptypes warning
       date: formatted
-    })
+    });
   }
 
   handleSubmit(e) {
@@ -36,7 +38,8 @@ class AttendanceForm extends React.Component {
       .then(this.setState({
         date: '',
         course_id: '',
-        student_id: ''
+        student_id: '',
+        status: ''
       }));
   }
 
@@ -56,13 +59,30 @@ class AttendanceForm extends React.Component {
     );
   }
 
+  listStatuses() {
+    const statuses = ['Absent', 'Present', 'Tardy'];
+    return (
+      <select
+        value={this.state.status}
+        onChange={this.update('status')}
+      >
+        <option value="" disabled>status</option>
+        {statuses.map((status, i) => (
+          <option value={status} key={i}>
+            {status}
+          </option>
+        ))}
+      </select>
+    );
+  }
+
   listStudents() {
     return (
       <select
         value={this.state.student_id}
         onChange={this.update('student_id')}
       >
-        <option value="" disabled>select student</option>
+        <option value="" disabled>student</option>
         {this.props.students.map((student, i) => (
             <option value={student.id} key={i}>
               {student.fname} {student.lname}
@@ -94,12 +114,13 @@ class AttendanceForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="add-attendance">
           <div className="dateLabel"><label>Select date</label></div>
           <DayPicker
-            initialMonth={ new Date(2017, 3) }
+            initialMonth={ new Date(2017, 4) }
             selectedDays={this.state.iday}
             onDayClick={this.handleDayClick}
           />
           {this.listCourses()}
           {this.listStudents()}
+          {this.listStatuses()}
           <input type="submit" value="Add Attendance" />
           {this.renderErrors()}
         </form>
