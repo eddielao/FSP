@@ -1,5 +1,5 @@
 class Attendance < ApplicationRecord
-  validates :date, :course_id, :student_id, presence: true
+  validates :date, :course_id, :student_id, :status, presence: true
 
   belongs_to :student,
     class_name: "Student",
