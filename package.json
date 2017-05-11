@@ -43,5 +43,8 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "webpack": "^1.12.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.1"
   }
 }
