@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 import { style } from '../modal/modal_style';
+import SessionFormContainer from '../session_form/session_form_container';
 
 class Login extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Login extends React.Component {
     this.state = {
                   username: "",
                   password: "",
+                  formType: "",
                   modalOpen: false
                 };
     this.handleGuest = this.handleGuest.bind(this);
@@ -33,8 +35,8 @@ class Login extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  openModal() {
-    this.setState({ modalOpen: true });
+  openModal(formType) {
+    this.setState({ formType: formType, modalOpen: true });
   }
 
   sessionLinks() {
@@ -50,7 +52,7 @@ class Login extends React.Component {
             style={style}
             contentLabel="Modal"
             >
-            Modal here
+            <SessionFormContainer formsType={this.state.formType}/>
           </Modal>
         </nav>
       </div>
