@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import Modal from 'react-modal';
+import { style } from '../modal/modal_style';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+                  username: "",
+                  password: "",
+                  modalOpen: false
+                };
     this.handleGuest = this.handleGuest.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
 
   handleGuest(e) {
@@ -20,13 +29,29 @@ class Login extends React.Component {
       .then(() => this.props.router.push("/login"));
   }
 
+  closeModal() {
+    this.setState({ modalOpen: false });
+  }
+
+  openModal() {
+    this.setState({ modalOpen: true });
+  }
+
   sessionLinks() {
     return (
       <div>
         <nav className="login-signup">
-          <Link to="/login" activeClassName="current">LOGIN</Link>
+          <a onClick={this.openModal}>LOGIN</a>
           <Link to="/signup" activeClassName="current">SIGN UP</Link>
           <button onClick={this.handleGuest}>guest</button>
+          <Modal
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            style={style}
+            contentLabel="Modal"
+            >
+            Modal here
+          </Modal>
         </nav>
       </div>
     );
@@ -44,10 +69,11 @@ class Login extends React.Component {
 
   render() {
     let currentUser = this.props.currentUser;
-    return (
-      currentUser ?
-      this.personalGreeting(
-        currentUser, this.props.logout) : this.sessionLinks());
+    if (currentUser) {
+      return this.personalGreeting(currentUser, this.props.logout);
+    } else {
+      return this.sessionLinks();
+    }
   }
 }
 
