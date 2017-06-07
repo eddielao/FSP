@@ -10,7 +10,7 @@ class Login extends React.Component {
     this.state = {
                   username: "",
                   password: "",
-                  formType: "",
+                  formType: "login",
                   modalOpen: false
                 };
     this.handleGuest = this.handleGuest.bind(this);
@@ -35,8 +35,8 @@ class Login extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  openModal(formType) {
-    this.setState({ formType: formType, modalOpen: true });
+  openModal() {
+    this.setState({ formType: this.state.formType, modalOpen: true });
   }
 
   sessionLinks() {
@@ -52,7 +52,7 @@ class Login extends React.Component {
             style={style}
             contentLabel="Modal"
             >
-            <SessionFormContainer formsType={this.state.formType}/>
+            <SessionFormContainer formsType={this.state.formType} />
           </Modal>
         </nav>
       </div>
