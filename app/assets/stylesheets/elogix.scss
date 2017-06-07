@@ -81,26 +81,14 @@ input::placeholder {
   color: dimgray;
 }
 
-.login-form input[type=submit] {
-  border-color: whitesmoke;
-}
-
+// .login-form input[type=submit] {
+//   border-color: whitesmoke;
+// }
+//
 .login-form-box {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: large;
-  height: 250px;
-  margin-bottom: 20%;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 5%;
-  padding: 1%;
-  padding-top: 2%;
-  border-radius: 2px;
-  text-align: center;
-  background-color: $blue-hover-color;
-  opacity: 0.8;
-  width: 250px;
 }
 
 input, select {
@@ -115,6 +103,10 @@ input, select {
 
 .item-index tbody tr:hover {
   background-color: lightgray;
+}
+
+.login-input {
+  text-align: center;
 }
 
 .login-signup {

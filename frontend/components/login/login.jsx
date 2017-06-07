@@ -10,13 +10,14 @@ class Login extends React.Component {
     this.state = {
                   username: "",
                   password: "",
-                  formType: "login",
+                  formType: "",
                   modalOpen: false
                 };
     this.handleGuest = this.handleGuest.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
+    this.openLoginModal = this.openLoginModal.bind(this);
+    this.openSignupModal = this.openSignupModal.bind(this);
   }
 
   handleGuest(e) {
@@ -28,23 +29,28 @@ class Login extends React.Component {
   handleLogout(e) {
     e.preventDefault();
     this.props.logout()
-      .then(() => this.props.router.push("/login"));
+      .then(() => this.props.router.push("/"));
   }
 
   closeModal() {
-    this.setState({ modalOpen: false });
+    this.props.clearErrors();
+    this.setState({formType: "", modalOpen: false });
   }
 
-  openModal() {
-    this.setState({ formType: this.state.formType, modalOpen: true });
+  openLoginModal() {
+    this.setState({ formType: "login", modalOpen: true });
+  }
+
+  openSignupModal() {
+    this.setState({ formType: "signup", modalOpen: true });
   }
 
   sessionLinks() {
     return (
       <div>
         <nav className="login-signup">
-          <a onClick={this.openModal}>LOGIN</a>
-          <Link to="/signup" activeClassName="current">SIGN UP</Link>
+          <a onClick={this.openLoginModal}>LOGIN</a>
+          <a onClick={this.openSignupModal}>SIGN UP</a>
           <button onClick={this.handleGuest}>guest</button>
           <Modal
             isOpen={this.state.modalOpen}
