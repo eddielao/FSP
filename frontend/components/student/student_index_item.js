@@ -3,18 +3,6 @@ import { Link } from 'react-router';
 import Modal from 'react-modal';
 import { style } from '../modal/modal_style';
 
-// const StudentIndexItem = ({ deleteStudent, student, router }) => {
-//   return (
-//       <tr>
-//         <td>{student.fname} {student.lname}</td>
-//         <td>{student.email}</td>
-//         <td className="remove">
-//           <button onClick={() => deleteStudent(student.id)}>remove</button>
-//         </td>
-//       </tr>
-//   );
-// };
-
 class StudentIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -90,3 +78,15 @@ class StudentIndexItem extends React.Component {
 }
 
 export default StudentIndexItem;
+
+// const StudentIndexItem = ({ deleteStudent, student, router }) => {
+//   return (
+//       <tr>
+//         <td>{student.fname} {student.lname}</td>
+//         <td>{student.email}</td>
+//         <td className="remove">
+//           <button onClick={() => deleteStudent(student.id)}>remove</button>
+//         </td>
+//       </tr>
+//   );
+// };

@@ -59,12 +59,9 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
-			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 					Welcome!
 					<br/>
-					{this.navLink()}
-					<div className="login-form">
 						<br/>
 							<input type="text"
 								value={this.state.username}
@@ -82,9 +79,7 @@ class SessionForm extends React.Component {
 						<br/>
 						<input type="submit" value={this.props.formType} />
 						{this.renderErrors()}
-					</div>
 				</form>
-			</div>
 		);
 	}
 
