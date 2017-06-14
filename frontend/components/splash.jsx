@@ -9,9 +9,21 @@ class Splash extends React.Component {
   ** 3) Trigger a timer inside ComponentDidMount
   */
 
+  constructor(props) {
+    super(props);
+    this.state = { imgNum: 1 };
+  }
+
+  ComponentDidMount() {
+    let imgCount = 2;
+    setInterval(function() {
+      this.setState({ imgNum: (this.state.imgNum + 1) % imgCount });
+    }, 5000);
+  }
+
   render () {
     return (
-      <div className="splash">
+      <div className={`splash-${this.state.imgNum}`}>
         Welcome!
       </div>
     );
