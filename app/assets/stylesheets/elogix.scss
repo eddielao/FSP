@@ -323,6 +323,16 @@ a:link:hover {
   color: $blue-theme-color;
   height: 800px;
   background-image: url(https://res.cloudinary.com/eddielao/image/upload/v1492913319/read-on-sofa_xoqaqu.jpg);
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 td {
