@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Splash = () => {
+class Splash extends React.Component {
   /*
   ** To make rotate background images
   ** 1) Change this to a class component
-  ** 2) 
+  ** 2) Define a state to change className
+  ** 3) Trigger a timer inside ComponentDidMount
   */
-  return (
-    <div className="splash">
-      Welcome!
-    </div>
-  );
-};
+
+  render () {
+    return (
+      <div className="splash">
+        Welcome!
+      </div>
+    );
+  }
+}
 
 export default Splash;
