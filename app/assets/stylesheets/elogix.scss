@@ -313,7 +313,7 @@ a:link:hover {
   color: $blue-theme-color;
 }
 
-.splash {
+.splash-0 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -322,7 +322,34 @@ a:link:hover {
   font-size: -webkit-xxx-large;
   color: $blue-theme-color;
   height: 800px;
-  background-image: url(https://res.cloudinary.com/eddielao/image/upload/v1492913319/read-on-sofa_xoqaqu.jpg);
+  background-image: url(https://res.cloudinary.com/eddielao/image/upload/c_scale,w_2000/v1492913319/read-on-sofa_xoqaqu.jpg);
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
+}
+
+.splash-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: $splash-font;
+  font-size: -webkit-xxx-large;
+  color: $blue-theme-color;
+  height: 800px;
+  background-image: url(https://res.cloudinary.com/eddielao/image/upload/c_scale,w_2000/v1497481819/pencils_xpgsr3.jpg);
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 td {
