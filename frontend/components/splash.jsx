@@ -12,19 +12,17 @@ class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-                  imgNum: parseInt(Date.now()/1000)%2,
-                  imgCount: 2
+                  imgNum: parseInt(Date.now()/1000)%2
                  };
   }
 
-  ComponentDidMount() {
-    setInterval(function() {
-      console.log("ComponentDidMount triggered");
-      this.setState({
-        imgNum: (this.state.imgNum + 1) % this.state.imgCount
-      });
-    }, 5000);
-  }
+  // componentDidMount() {
+  //   let imgCount = 2;
+  //   setInterval(()=>{
+  //     console.log("componentDidMount triggered");
+  //     this.setState({ imgNum: parseInt(Date.now()/1000) % imgCount });
+  //   }, 8000);
+  // }
 
   render () {
     return (
