@@ -12,7 +12,7 @@ class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-                  imgNum: parseInt(Date.now()/1000)%2
+                  imgNum: parseInt(Date.now()/1000)%3
                  };
   }
 

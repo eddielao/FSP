@@ -347,6 +347,23 @@ a:link:hover {
   animation: fadein 4s;
 }
 
+.splash-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: $splash-font;
+  font-size: -webkit-xxx-large;
+  color: $blue-theme-color;
+  height: 800px;
+  background-image: url(https://res.cloudinary.com/eddielao/image/upload/c_scale,w_2000/v1497999540/apple-desk-laptop-working_b6fvyg.jpg);
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
