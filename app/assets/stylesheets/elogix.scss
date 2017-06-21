@@ -148,6 +148,10 @@ input, select {
   white-space: nowrap;
 }
 
+.login-signup a:hover {
+  cursor: pointer;
+}
+
 a:link {
   font-weight: lighter;
   font-size: 15px;
