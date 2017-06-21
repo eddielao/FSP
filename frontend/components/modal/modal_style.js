@@ -8,7 +8,7 @@ export const style = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(43, 143, 209, 0.75)',
+    backgroundColor : 'rgba(163, 163, 163, 0.75)',
     paddingBottom   : '10%',
   },
   content : {
@@ -20,8 +20,12 @@ export const style = {
     left            : 'auto',
     right           : 'auto',
     bottom          : 'auto',
-    backgroundColor : 'whitesmoke',
+    backgroundColor : 'rgba(43, 143, 209, 1)',
     border          : '1px solid #ccc',
-    padding         : '30px',
+    fontFamily      : 'Roboto',
+    padding         : '0',
+    paddingBottom   : '30px',
+    height          : '40%',
+    width           : '40%',
   }
 };

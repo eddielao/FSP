@@ -63,19 +63,21 @@ class SessionForm extends React.Component {
 					Welcome!
 					<br/>
 						<br/>
+						<div className="username-password">
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
 								className="login-input"
 								placeholder="username"
-							/>
-						<br/>
+								/>
+							<br/>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input"
 								placeholder="password"
-							/>
+								/>
+						</div>
 						<br/>
 						<input type="submit" value={this.props.formType} />
 						{this.renderErrors()}

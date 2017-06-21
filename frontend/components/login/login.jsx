@@ -58,6 +58,9 @@ class Login extends React.Component {
             style={style}
             contentLabel="Modal"
             >
+            <div className="modal-header">
+              <button onClick={this.closeModal}>x</button>
+            </div>
             <SessionFormContainer formsType={this.state.formType} />
           </Modal>
         </nav>

@@ -79,6 +79,7 @@ input[type=submit] {
 input::placeholder {
   background-color: whitesmoke;
   color: dimgray;
+  font-size: x-large;
 }
 
 // .login-form input[type=submit] {
@@ -87,8 +88,22 @@ input::placeholder {
 //
 .login-form-box {
   align-items: center;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
+  font-size: xx-large;
+  height: 100%;
+}
+
+.login-form-box input {
+  font-size: smaller;
+  height: 50%;
+}
+
+.login-form-box input[type=submit] {
+  border-style: groove;
+  border-width: thin;
+  height: 10%;
 }
 
 input, select {
@@ -106,6 +121,7 @@ input, select {
 }
 
 .login-input {
+  background-color: whitesmoke;
   text-align: center;
 }
 
@@ -305,6 +321,20 @@ a:link:hover {
   justify-content: center;
 }
 
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-header button {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.modal-header button:hover {
+  background-color: $blue-theme-color;
+}
+
 .slogan {
   font-family: $splash-font;
   opacity: 0.65;
@@ -436,4 +466,8 @@ tbody td {
   display: flex;
   padding: 1%;
   justify-content: space-between;
+}
+
+.username-password {
+  height: 30%;
 }
