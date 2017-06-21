@@ -22,6 +22,7 @@ export const style = {
     bottom          : 'auto',
     backgroundColor : 'rgba(43, 143, 209, 1)',
     border          : '1px solid #ccc',
+    borderWidth     : '0',
     fontFamily      : 'Roboto',
     padding         : '0',
     paddingBottom   : '30px',
