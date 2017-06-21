@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
-import { style } from '../modal/modal_style';
+import { style } from '../modal/modal_login_style';
 import SessionFormContainer from '../session_form/session_form_container';
 
 class Login extends React.Component {
